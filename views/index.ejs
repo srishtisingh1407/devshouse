@@ -1,11 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include ./partials/header.ejs %>
+<nav>
+  <div class="nav__content">
+    <div class="logo"><a href="#">CoVibe</a></div>
+    
+    <ul>
+      <li><a href="/index">Home</a></li>
+      <li><a href="#">Hackathons</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Who are we?</a></li>
+     <button class="nav-btn">Log In</button>
+    </ul>
+  </div>
+</nav>
+<section class="section">
+  <div class="section__container">
+    <div class="content">
+      <p class="subtitle">HELLO THERE,</p>
+      <h1 class="title">
+        Discover your best winning team.
+      </h1>
+      <p class="description">
+        Unlock team magic on <span>coVibe!</span> 
+        Match with talents for epic projects and unforgettable 
+        triumphs. <br> Dive in today, success awaits!
+      </p>
+      <div class="action__btns">
+        <button class="hackathon-btn">Find Hackathon</button>
+        <button class="start-btn">Get Started</button>
+      </div>
+      <div class="action-texts">
+        <span class="action-text-1" style="color: #a5eace;">->Find</span>
+        <span class="action-text-2" style="color: #fa809f;">->Build</span>
+        <span class="action-text-3" style="color: #acc7f3;">->Win</span>
+      </div>
+    </div>
+    <div class="images">
+      <img src="/images/hero3.png" alt="" class="hero">
+    </div>
+  </div>
+</section>
+<% include ./partials/footer.ejs %>
