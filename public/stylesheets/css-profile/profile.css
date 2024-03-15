@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins' , sans-serif ;
+    color: #fff;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+    /* 3.5rem navbar size */
+  }
+
+
+  .container{
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to top right ,#060113 , #29313E );
+    padding: 1px;
+    position: relative;
+    overflow-x: hidden;
+    font-size: 1rem;
+  }
+
+  .main-card{
+
+    /* background-color: lavender; */
+    /* margin-top: 5rem; */
+    margin: 3rem 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: absolute;
+    transform: translate(-50%, -50%); */
+    
+  }
+
+
+  /*  DIV PLACEMENTS  */
+
+  .main-card .up-card {
+
+    width: 100%;
+    height: 35%;
+    /* background-color: rgba(0, 0, 255, 0.068); */
+    background-image: url(/images/bg.png);
+    background-position:center;
+    border-radius: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* background-size:auto; */
+  }
+
+
+
+ 
+
+  .main-card .up-card .text {
+
+  
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    bottom:0;
+    right: 1px;
+    padding: 2rem 0;
+    border-radius: 30px;
+    background-color: #362E4C70;
+    box-shadow: 4px 4px 6px #130B2B35 , 4px 4px 4px #463E5F35 inset ;
+   
+  }
+  
+  .up-card .pfp {
+
+    height: 10rem;
+    width: 10rem;
+    /* background-color: #060113; */
+    position: absolute ;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: 100;
+    /* overflow: hidden; */
+  }
+
+  .up-card .pfp .pfp-image {
+
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid #8F85AE75;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px #1c162f75;
+  }
+
+
+  .main-card .down-card {
+
+    /* background-color: rgba(255, 0, 0, 0.256); */
+    /* min-width: 100%; */
+    height: 65%;
+    margin: 2rem 3rem;
+    display: flex;
+    gap: 1.35rem;
+    /* flex-wrap: wrap; */
+    
+
+  }
+
+
+
+ 
+  .down-card .down-left {
+
+    height: 100%;
+    width: 50%;
+    margin: auto;
+   
+  }
+
+  .down-card .down-right {
+
+    height: 100%;
+    width: 50%;
+    /* background-color: palegreen; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    
+  } 
+  
+  .down-right .right-down {
+
+    height: 50%;
+    width: 100%;
+    /* background-color: pink; */
+  }
+
+  .down-right .right-up {
+
+    height: 45%;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .right-up  .right-up-left {
+
+
+    width: 45%;
+    height: 100%;
+    /* background-color: #34294f; */
+
+  }
+
+  .right-up .right-up-right {
+
+    width: 40%;
+    height: 100%;
+    /* background-color: #060113; */
+
+  }
+
+  .block {
+
+    /* border: 2px solid black; */
+    border-radius: 30px;
+    background-color: #7660B615;
+    box-shadow: 4px 4px 6px #130B2B35 , 4px 4px 4px #463E5F35 inset ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+
+  /*  TEXT DIVS  */
+
+  .text-left , .text-right {
+
+   
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .left-column, .right-column {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+
+  /* ***** DOWN CARD DETAILS***** */
+
+  .down-card .heading {
+
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1;
+    margin-top: 1rem;
+
+    
+
+  }
+
+  .down-card .heading p{
+    
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .down-card .icons {
+
+    height: 3rem;
+    width: 3rem;
+    /* background-color: blue; */
+
+  }
+
+  .down-left .content p {
+    /* background-color: red; */
+    /* text-align:center; */
+    font-weight: 300;
+    font-size: 0.85rem;
+    margin: 1rem 3rem;
+
+
+  }
+
+   .line {
+
+    height: 1px;
+    width: 90%;
+    /* color: #d1cce0; */
+    border-bottom: 1px solid  #d1cce015;
+    margin: 1rem 8rem;
+  }
+
+
+  /* ******KEY SKILLS ******* */
+
+  .right-up-left {
+
+    /* display: flex; */
+    /* background-color: #060113; */
+  }
+
+  .right-up-left .key-down {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    justify-content: space-around;
+  }
+
+  .key-down .key-left , .key-right {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    /* background-color: rgba(0, 0, 0, 0.215); */
+  }
+
+  .key-down .key-right .bar {
+
+    height: 0.56rem;
+    width: 7rem;
+    /* border: 1px solid white; */
+    /* margin-bottom: 2rem; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 1px 1px 4px #050410cf;
+    border-radius: 5px;
+    
+  }
+
+  .key-right .bar::after {
+
+    content: '';
+    height: 0.56rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    /* background-color: red; */
+    /* width: 100%; */
+  }
+
+  .key-right .bar:nth-child(1)::after{
+
+    width: 76%;
+    background-color: #ce5472;
+    box-shadow: 1px 1px 3px #fd4a77, 1px 1px 3px #ff97b1 inset;
+  }
+  
+  
+  .key-right .bar:nth-child(2)::after{
+
+    width: 43%;
+    background-color: #86BBA6;
+    box-shadow: 1px 1px 3px #0cff9e, 1px 1px 3px #a3fdd9 inset;
+  }
+  
+  
+  .key-right .bar:nth-child(3)::after{
+
+    width: 54%;
+    background-color: #94ABD1;
+    box-shadow: 1px 1px 3px #2b79f6, 1px 1px 3px #cee0ff inset;
+    
+  }
+  
+  
+  .key-right .bar:nth-child(4)::after{
+
+    width: 32%;
+    background-color: #D5734D;
+    box-shadow: 1px 1px 3px #f1642c, 1px 1px 3px #fbbaa0 inset;
+  
+  }
+
+
+  .right-down {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-left: 1rem;
+
+  }
+
+  .right-down .bullet {
+
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .right-down .date {
+
+    font-weight: 200;
+    /* color: #0cff9e; */
+    margin-top: -2rem;
+  }
+
+  .down-left .about-icon {
+
+    height: 4rem;
+    width: 4rem;
+  }
