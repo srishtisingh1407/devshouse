@@ -1,42 +1,494 @@
-<% include ./partials/header.ejs %>
-<nav>
-  <div class="nav__content">
-    <div class="logo"><a href="#">CoVibe</a></div>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== SWIPER CSS ===============--> 
+        <link rel="stylesheet" href="/stylesheets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============--> 
+        <link rel="stylesheet" href="/stylesheets/css/styles.css">
+
+        <title>Responsive Halloween Website</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="/images/img/assets/img/logo.png" alt="" class="nav__logo-img">
+                    CoVibe
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#trick" class="nav__link">Hackathons</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">New</a>
+                        </li>
+
+                        <a href="#" class="button button--ghost">Log In</a>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <img src="/images/img/assets/img/nav-img.png" alt="" class="nav__img">
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home container" id="home">
+                <div class="swiper home-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- HOME SLIDER 1 -->
+                        <section class="swiper-slide">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img src="/images/img/points-space.svg" alt="" class="star__img">
+                                    <img src="/images/img/rocket.svg" alt="" class="home__img">
+                                   
+                                    <img src="/images/img/planet.svg" alt="" class="planet__img">
+                                    <div class="home__indicator"></div>
     
-    <ul>
-      <li><a href="/index">Home</a></li>
-      <li><a href="#">Hackathons</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">Who are we?</a></li>
-     <button class="nav-btn">Log In</button>
-    </ul>
-  </div>
-</nav>
-<section class="section">
-  <div class="section__container">
-    <div class="content">
-      <p class="subtitle">HELLO THERE,</p>
-      <h1 class="title">
-        Discover your best winning team.
-      </h1>
-      <p class="description">
-        Unlock team magic on <span>coVibe!</span> 
-        Match with talents for epic projects and unforgettable 
-        triumphs. <br> Dive in today, success awaits!
-      </p>
-      <div class="action__btns">
-        <button class="hackathon-btn">Find Hackathon</button>
-        <button class="start-btn">Get Started</button>
-      </div>
-      <div class="action-texts">
-        <span class="action-text-1" style="color: #a5eace;">->Find</span>
-        <span class="action-text-2" style="color: #fa809f;">->Build</span>
-        <span class="action-text-3" style="color: #acc7f3;">->Win</span>
-      </div>
-    </div>
-    <div class="images">
-      <img src="/images/hero3.png" alt="" class="hero">
-    </div>
-  </div>
-</section>
-<% include ./partials/footer.ejs %>
+                                    <div class="home__details-img">
+                                        <h4 class="home__details-title">Tighten up ypu seat belt</h4>
+                                        <span class="home__details-subtitle">Let's vibe together!</span>
+                                    </div>
+                                </div>
+    
+                                <div class="home__data">
+                                    <h3 class="home__subtitle">Hello there!</h3>
+                                    <h1 class="home__title">Discover your next winning team.</h1>
+                                    <p class="home__description">Unlock team magic on coVibe! Match with talents for epic projects and unforgettable triumphs. Dive in today, success awaits!</p>
+
+                                    <div class="home__buttons">
+                                        <a href="#" class="button">Get Started!</a>
+                                        <a href="#" class="button--link button--flex">Explore hackathons <i class='bx bx-right-arrow-alt button__icon'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- HOME SLIDER 2 -->
+                        <section class="swiper-slide">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img src="/images/img/home2-img.png" alt="" class="home__img">
+                                    <div class="home__indicator"></div>
+    
+                                    <div class="home__details-img">
+                                        <h4 class="home__details-title">Get the tribe,</h4>
+                                        <span class="home__details-subtitle">That matches your Vibe!</span>
+                                    </div>
+                                </div>
+    
+                                <div class="home__data">
+                                    <h3 class="home__subtitle">RoomieQuest: Where Friendships Begin!</h3>
+                                    <h1 class="home__title">Your Key to Campus Harmony </h1>
+                                    <p class="home__description">Discover roomie magic at UniMatch! Find your perfect match for unforgettable college adventures. Join now!</p>
+
+                                    <div class="home__buttons">
+                                        <a href="#" class="button">University</a>
+                                        <a href="#" class="button--link button--flex">Know more<i class='bx bx-right-arrow-alt button__icon'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- HOME SLIDER 3 -->
+                        <section class="swiper-slide">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img src="/images//img/home3-img.png" alt="" class="home__img">
+                                    <div class="home__indicator"></div>
+    
+                                    <div class="home__details-img">
+                                        <h4 class="home__details-title">Captain Sem</h4>
+                                        <span class="home__details-subtitle">Veteran Spooky Ghost</span>
+                                    </div>
+                                </div>
+    
+                                <div class="home__data">
+                                    <h3 class="home__subtitle">#3 Top Scariest  Ghost</h3>
+                                    <h1 class="home__title">RESPAWN <br> THE SPOOKY <br> SKULL</h1>
+                                    <p class="home__description">In search for cute little puppy, Captain Sem has come back from his tragic death. 
+                                        With his hogwarts certified power he promise to be a hero for all of ghostkind.
+                                    </p>
+
+                                    <div class="home__buttons">
+                                        <a href="#" class="button">Book Now</a>
+                                        <a href="#" class="button--link button--flex">Track Record <i class='bx bx-right-arrow-alt button__icon'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            
+            <!--==================== CATEGORY ====================-->
+            <section class="section category">
+                <h2 class="section__title">Upcoming Major <br> HACKATHONS!</h2>
+
+                <div class="category__container container grid">
+                    <div class="category__data">
+                        <img src="/images/img/rthmumbai.png" alt="" class="category__img">
+                        <a href="https://ethmumbai.in/" target="_blank"><h3 class="category__title">Eth Mumabi</h3></a>
+                        <p class="category__description">Build from mumbai for the World!</p>
+                    </div>
+
+                    <div class="category__data">
+                        <img src="/images/img/grant.png" alt="" class="category__img">
+                       <a href="https://devfolio.co/ethindiagrants2023/dashboard" target="_blank"><h3 class="category__title">ETHIndia Grants 2.0</h3></a> 
+                        <p class="category__description">Build a thriving Ethereum ecosystem, one project at a time 🌱</p>
+                    </div>
+
+                    <div class="category__data">
+                        <img src="/images/img/website-v2.svg" alt="" class="category__img">
+                        <a href="https://hackfest.dev/" target="_blank"><h3 class="category__title">Hackfest</h3></a>
+                        <p class="category__description">🚀 A battle of code & innovation amongst geeks</p>
+                    </div>
+                   
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="section about" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">About CoVibe <br></h2>
+                        <p class="about__description">At CoVibe, we believe that innovation thrives in diverse and inclusive communities. Our platform is designed to bring together individuals from all walks of life to collaborate, create, and compete in hackathons.Our mission is to make hackathons more accessible, engaging, and rewarding for participants around the world. Whether you're a seasoned hacker or just getting started
+                        </p>
+                        <a href="#" class="button">Know more</a>
+                    </div>
+
+                    <img src="/images/img/about.svg" alt="" class="about__img">
+                </div>
+            </section>
+
+            <!--==================== TRICK OR TREAT ====================-->
+            <section class="section trick" id="trick">
+                <h2 class="section__title">Get In The Zone</h2>
+
+                <div class="trick__container container grid">
+                    <div class="trick__content">
+                        <img src="/images/img/profile.png" alt="" class="profile__img">
+                        <a href=""><h3 class="trick__title">SETUP ACCOUNT</h3></a>
+                        <span class="trick__subtitle">Let everyone know you and your</span>
+                        <span class="trick__price">VIBE!</span>
+                        <button class="button trick__button">
+                            <i class='bx bx-cart-alt trick__icon'></i>
+                        </button>
+                    </div>
+
+                    <div class="trick__content">
+                        <img src="/images/img/girl.webp" alt="" class="girl__img">
+                        <h3 class="trick__title">HACKATHONS</h3>
+                        <span class="trick__subtitle">JOIN or CREATE Team and start</span>
+                        <span class="trick__price">HACKING</span>
+                        <button class="button trick__button">
+                            <i class='bx bx-cart-alt trick__icon'></i>
+                        </button>
+                    </div>
+
+                    <div class="trick__content">
+                        <img src="/images/img/comp.png" alt="" class="comp__img">
+                        <h3 class="trick__title">How do we work?</h3>
+                        <span class="trick__subtitle">Quick guide at a glance for easy use.</span>
+                        <a href=""><span class="trick__price">CLICK HERE!</span></a>
+                        <button class="button trick__button">
+                            <i class='bx bx-cart-alt trick__icon'></i>
+                        </button>
+                    </div>
+
+                    <!-- <div class="trick__content">
+                        <img src="/images/img/trick-treat4-img.png" alt="" class="trick__img">
+                        <h3 class="trick__title">Candy Cane</h3>
+                        <span class="trick__subtitle">Candy</span>
+                        <span class="trick__price">$7.99</span>
+                        <button class="button trick__button">
+                            <i class='bx bx-cart-alt trick__icon'></i>
+                        </button>
+                    </div>
+
+                    <div class="trick__content">
+                        <img src="/images/img/trick-treat5-img.png" alt="" class="trick__img">
+                        <h3 class="trick__title">Pumpkin</h3>
+                        <span class="trick__subtitle">Candy</span>
+                        <span class="trick__price">$19.99</span>
+                        <button class="button trick__button">
+                            <i class='bx bx-cart-alt trick__icon'></i>
+                        </button>
+                    </div>
+
+                    <div class="trick__content">
+                        <img src="/images/img/trick-treat6-img.png" alt="" class="trick__img">
+                        <h3 class="trick__title">Ghost</h3>
+                        <span class="trick__subtitle">Accessory</span>
+                        <span class="trick__price">$17.99</span>
+                        <button class="button trick__button">
+                            <i class='bx bx-cart-alt trick__icon'></i>
+                        </button>
+                    </div>
+                </div> -->
+            </section>
+            
+            <!--==================== DISCOUNT ====================-->
+            <section class="section discount">
+                <div class="discount__container container grid">
+                    <div class="discount__data">
+                        <h2 class="discount__title">Your Privacy Matters: Clear Policies <br>Trusted Practices.</h2>
+                        <a href="#" class="button">know more</a>
+                    </div>
+
+                    <img src="images/img/privacy.webp" alt="" class="discount__img">
+                </div>
+            </section>
+
+            <!--==================== NEW ARRIVALS ====================-->
+            <!-- <section class="section new" id="new">
+                <h2 class="section__title">New Arrivals</h2>
+
+                <div class="new__container container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="new__content swiper-slide">
+                                <div class="new__tag">New</div>
+                                <img src="/images/img/new1-img.png" alt="" class="new__img">
+                                <h3 class="new__title">Haunted House</h3>
+                                <span class="new__subtitle">Accessory</span>
+                                
+                                <div class="new__prices">
+                                    <span class="new__price">$14.99</span>
+                                    <span class="new__discount">$29.99</span>
+                                </div>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-cart-alt new__icon'></i>
+                                </button>
+                            </div>
+        
+                            <div class="new__content swiper-slide">
+                                <div class="new__tag">New</div>
+                                <img src="/images/img/new2-img.png" alt="" class="new__img">
+                                <h3 class="new__title">Halloween Candle</h3>
+                                <span class="new__subtitle">Accessory</span>
+        
+                                <div class="new__prices">
+                                    <span class="new__price">$11.99</span>
+                                    <span class="new__discount">$21.99</span>
+                                </div>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-cart-alt new__icon'></i>
+                                </button>
+                            </div>
+        
+                            <div class="new__content swiper-slide">
+                                <div class="new__tag">New</div>
+                                <img src="/images/img/new3-img.png" alt="" class="new__img">
+                                <h3 class="new__title">Witch Hat</h3>
+                                <span class="new__subtitle">Accessory</span>
+        
+                                <div class="new__prices">
+                                    <span class="new__price">$4.99</span>
+                                    <span class="new__discount">$9.99</span>
+                                </div>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-cart-alt new__icon'></i>
+                                </button>
+                            </div>
+        
+                            <div class="new__content swiper-slide">
+                                <div class="new__tag">New</div>
+                                <img src="/images/img/new4-img.png" alt="" class="new__img">
+                                <h3 class="new__title">Rip</h3>
+                                <span class="new__subtitle">Accessory</span>
+        
+                                <div class="new__prices">
+                                    <span class="new__price">$24.99</span>
+                                    <span class="new__discount">$44.99</span>
+                                </div>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-cart-alt new__icon'></i>
+                                </button>
+                            </div>
+        
+                            <div class="new__content swiper-slide">
+                                <div class="new__tag">New</div>
+                                <img src="/images/img/new5-img.png" alt="" class="new__img">
+                                <h3 class="new__title">Terrifying Crystal Ball</h3>
+                                <span class="new__subtitle">Accessory</span>
+        
+                                <div class="new__prices">
+                                    <span class="new__price">$5.99</span>
+                                    <span class="new__discount">$12.99</span>
+                                </div>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-cart-alt new__icon'></i>
+                                </button>
+                            </div>
+        
+                            <div class="new__content swiper-slide">
+                                <div class="new__tag">New</div>
+                                <img src="/images/img/new6-img.png" alt="" class="new__img">
+                                <h3 class="new__title">Witch Broom</h3>
+                                <span class="new__subtitle">Accessory</span>
+        
+                                <div class="new__prices">
+                                    <span class="new__price">$7.99</span>
+                                    <span class="new__discount">$14.99</span>
+                                </div>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-cart-alt new__icon'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!--==================== OUR NEWSLETTER ====================-->
+            <!-- <section class="section newsletter">
+                <div class="newsletter__container container">
+                    <h2 class="section__title">Our Newsletter</h2>
+                    <p class="newsletter__description">
+                        Promotion new products and sales. Directly to your inbox
+                    </p>
+
+                    <form action="" class="newsletter__form">
+                        <input type="text" placeholder="Enter your email" class="newsletter__input">
+                        <button class="button">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </section> -->
+        </main>
+
+        <!--==================== FOOTER ====================-->
+            <footer class="footer section">
+                <div class="footer__container container grid">
+                    <div class="footer__content">
+                        <a href="#" class="footer__logo">
+                            <img src="/images/img/logo.png" alt="" class="footer__logo-img">
+                            Halloween
+                        </a>
+
+                        <p class="footer__description">Enjoy the scariest night <br> of your life.</p>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                                <i class='bx bxl-instagram-alt' ></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                                <i class='bx bxl-twitter' ></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__content">
+                        <h3 class="footer__title">About</h3>
+                        
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Features</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">News</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__content">
+                        <h3 class="footer__title">Our Services</h3>
+                        
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Discounts</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Shipping mode</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__content">
+                        <h3 class="footer__title">Our Company</h3>
+                        
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">About us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Our mision</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <span class="footer__copy">&#169; Bedimcode. All rigths reserved</span>
+
+                <img src="/images/img/footer1-img.png" alt="" class="footer__img-one">
+                <img src="/images/img/footer2-img.png" alt="" class="footer__img-two">
+            </footer>
+
+            <!--=============== SCROLL UP ===============-->
+            <a href="#" class="scrollup" id="scroll-up">
+                <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+            </a>
+        
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="/javascripts/js-home/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="/javascripts/js-home/swiper-bundle.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="/javascripts/js-home/main.js"></script>
+    </body>
+</html>6
