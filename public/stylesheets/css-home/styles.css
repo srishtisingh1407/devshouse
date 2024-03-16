@@ -429,6 +429,11 @@ button{
   margin-bottom: var(--mb-0-75);
   transition: .3s;
 }
+.category__img1{
+  width: 110px;
+  margin-bottom: var(--mb-0-75);
+  transition: .3s;
+}
 
 .category__title{
   margin-bottom: var(--mb-0-25);

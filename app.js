@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var axios = require('axios');
+var bodyParser = require("body-parser")
+var mongoose = require("mongoose")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,6 +25,36 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
+
+app.use(bodyParser.json())
+app.use(express.static('public'))
+app.use(bodyParser.urlencoded({
+    extended:true
+}))
+
+
+// Route to calculate distance between two locations
+app.get('/distance', async (req, res) => {
+  try {
+    const { origin, destination, key } = req.query;
+
+    const response = await axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
+      params: {
+        origins: origin,
+        destinations: destination,
+        key: key,
+      },
+    });
+
+    const distance = response.data.rows[0].elements[0].distance.text;
+    res.json({ distance });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -37,5 +70,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;

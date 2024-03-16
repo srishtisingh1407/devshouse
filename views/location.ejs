@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter People</title>
+    <link rel="stylesheet" href="/stylesheets/css-loc/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="title">
+                Filter People
+            </div>
+            <div class="search_box">
+                <input type="text" id="search_input" placeholder="Filter Table Using Names">
+            </div>
+            <div class="filter">
+                <label for="latitude">Latitude:</label>
+                <input type="number" id="latitude" step="any">
+                <label for="longitude">Longitude:</label>
+                <input type="number" id="longitude" step="any">
+                <button onclick="filterByLocation()">Filter by Location</button>
+            </div>
+        </div>
+      
+        <div class="table_wrap">
+            <div class="table_header">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="name">
+                                <span>NAME</span>
+                            </div>
+                            <div class="phone">
+                                <span>DOMAIN</span>
+                            </div>
+                            <div class="issue">
+                                <span>PROFILE</span>
+                            </div>
+                            <div class="status">
+                                <span>STATUS</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="table_body">
+                <ul id="people_list">
+                    <!-- Dynamic data will be inserted here -->
+                </ul>
+            </div>
+            <div class="table_footer"></div>
+        </div>
+    </div>
+    
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById("latitude").value = latitude;
+            document.getElementById("longitude").value = longitude;
+        }
+
+        // Call getLocation() when the page loads
+        window.onload = getLocation;
+
+        // Data for 10 people
+        const peopleData = [
+            { name: "John Doe", domain: "Web Developer", profile: "/profile1", status: "open", latitude: 40.7128, longitude: -74.0060 },
+            { name: "Jane Smith", domain: "UX Designer", profile: "/profile2", status: "fixed", latitude: 34.0522, longitude: -118.2437 },
+            { name: "Alice Johnson", domain: "Data Scientist", profile: "/profile3", status: "closed", latitude: 51.5074, longitude: -0.1278 },
+            { name: "Bob Brown", domain: "Software Engineer", profile: "/profile4", status: "hold", latitude: 48.8566, longitude: 2.3522 },
+            { name: "Eva Wilson", domain: "Graphic Designer", profile: "/profile5", status: "reopened", latitude: 52.5200, longitude: 13.4050 },
+            { name: "Michael Lee", domain: "Product Manager", profile: "/profile6", status: "canceled", latitude: 37.7749, longitude: -122.4194 },
+            { name: "Sophia Martin", domain: "UI Developer", profile: "/profile7", status: "open", latitude: 37.7749, longitude: -122.4194 },
+            { name: "Liam Garcia", domain: "Database Administrator", profile: "/profile8", status: "fixed", latitude: 37.7749, longitude: -122.4194 },
+            { name: "Olivia Rodriguez", domain: "Systems Analyst", profile: "/profile9", status: "closed", latitude: 37.7749, longitude: -122.4194 },
+            { name: "William Martinez", domain: "Network Engineer", profile: "/profile10", status: "hold", latitude: 37.7749, longitude: -122.4194 }
+        ];
+
+        // Function to generate HTML for people list
+        function generatePeopleList(people) {
+            const ul = document.getElementById("people_list");
+            ul.innerHTML = ""; // Clear previous data
+            
+            people.forEach(person => {
+                const li = document.createElement("li");
+                li.innerHTML = `
+                    <div class="item">
+                        <div class="name">
+                            <span>${person.name}</span>
+                        </div>
+                        <div class="phone">
+                            <span>${person.domain}</span>
+                        </div>
+                        <div class="issue">
+                            <a href="${person.profile}"><span>Know me more!</span></a>
+                        </div>
+                        <div class="status">
+                            <span class="${person.status}"></span>
+                        </div>
+                    </div>`;
+                ul.appendChild(li);
+            });
+        }
+
+        // Initial display of people
+        generatePeopleList(peopleData);
+
+        // Function to filter people by location
+        function filterByLocation() {
+            const latitude = parseFloat(document.getElementById("latitude").value);
+            const longitude = parseFloat(document.getElementById("longitude").value);
+        
+            if (isNaN(latitude) || isNaN(longitude)) {
+                alert("Please enter valid latitude and longitude values.");
+                return;
+            }
+        
+            // Filter people based on location
+            const filteredPeople = peopleData.filter(person => {
+                return person.latitude < latitude && person.longitude < longitude;
+            });
+
+            generatePeopleList(filteredPeople);
+        }
+    </script>
+</body>
+</html>

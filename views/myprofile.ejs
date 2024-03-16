@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Accordion Vertical Tab - Codingscape</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/stylesheets/css-myprofile/myprofile.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="main-card">
+        <div class="accordion_tab">
+            <div class="accordion_tab_wrapper">
+                <input type="radio" id="one" name="accordion_group" class="radio" checked>
+                <input type="radio" id="two" name="accordion_group" class="radio">
+                <input type="radio" id="three" name="accordion_group" class="radio">
+                <input type="radio" id="four" name="accordion_group" class="radio">
+             
+                <div class="accordion_tab_group">
+                    <label for="one" class="tab" id="one-tab"> <img src="/images/Personal Info.png" alt=""> <div  class="opt">Personal Info</div> </label>
+                    <label for="two" class="tab" id="two-tab"><img src="/images/Education.svg" alt=""><div  class="opt">Education</div></label>
+                    <!-- <label for="three" class="tab" id="three-tab">Certificate</label> -->
+                    <label for="four" class="tab" id="four-tab"><img src="/images/about-img.png" alt=""><div  class="opt">About</div></label>
+                </div>
+              
+        
+                <div class="accordion_tab_contents">
+                    <div class="accordion_tab_content" id="one-tab-content">
+                        <!-- <h2 class="accordion_tab_title">What is HTML?</h2> -->
+                        <!-- <p class="accordion_tab_description">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a webbrowser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p> -->
+                        <form class="personal-info-form accordion_tab_description block">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" pattern="[0-9]{10}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location:</label>
+                                <input type="text" id="location" name="location" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender:</label>
+                                <select id="gender" name="gender" class="form-control" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        
+                    </div>
+                    <div class="accordion_tab_content" id="two-tab-content">
+                        <form class="education-info-form accordion_tab_description block">
+                            <div class="form-group">
+                                <label for="college">College Name:</label>
+                                <input type="text" id="college" name="college" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Course Name:</label>
+                                <input type="text" id="course" name="course" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="graduation-year">Graduation Year:</label>
+                                <input type="text" id="graduation-year" name="graduation-year" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cgpa">CGPA:</label>
+                                <input type="text" id="cgpa" name="cgpa" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        
+                    </div>
+                    <!-- <div class="accordion_tab_content" id="three-tab-content">
+                        <h2 class="accordion_tab_title">What is Javascript?</h2>
+                        <p class="accordion_tab_description">JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World WideWeb, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, oftenincorporating third-party libraries</p>
+                    </div> -->
+                    <div class="accordion_tab_content" id="four-tab-content">
+                        <form class="skills-projects-form accordion_tab_description block">
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Top 4 Skills:</label>
+                                <div class="skills-container">
+                                    <div class="skill-column">
+                                        <input type="text" id="skill1" name="skill1" class="form-control skill" required>
+                                        <input type="text" id="skill2" name="skill2" class="form-control skill" required>
+                                        <input type="text" id="skill3" name="skill3" class="form-control skill" required>
+                                        <input type="text" id="skill4" name="skill4" class="form-control skill" required>
+                                    </div>
+                                    <div class="slider-column">
+                                        <input type="range" min="0" max="10" value="0" class="slider" required>
+                                        <input type="range" min="0" max="10" value="0" class="slider" required>
+                                        <input type="range" min="0" max="10" value="0" class="slider" required>
+                                        <input type="range" min="0" max="10" value="0" class="slider" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="projects">Top 3 Projects:</label>
+                                <textarea id="projects" name="projects" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="certificates">Certificates:</label>
+                                <textarea id="certificates" name="certificates" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

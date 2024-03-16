@@ -19,7 +19,7 @@
 
     width: 100%;
     height: 100%;
-    background: linear-gradient( #060113 , #1d222b );
+    background: linear-gradient(#060113, #29313E );
     padding: 1px;
     position: relative;
     overflow-x: hidden;
@@ -298,6 +298,7 @@
     /* background-color: #060113; */
 
   }
+  /* kk */
 
   .block {
 

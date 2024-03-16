@@ -1,0 +1,429 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    /* background: #f8edeb; */
+    background: linear-gradient(#060113 , #29313E );
+    font-family: 'Poppins', sans-serif;
+    padding: 4rem 0;
+}
+
+/* Style for main-card container */
+.main-card {
+    /* max-width: 600px; */
+    width: 80%;
+    margin: auto;
+    height: 90vh;
+    padding: 20px;
+    border: 1px solid white; /* White border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: transparent; /* Transparent background */
+    background: url(/images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    display: flex;
+    justify-content: center;
+}
+
+.accordion_tab{
+    /* max-width: 640px; */
+    width: 90%;
+    padding: 10px;
+    /* background-color: #7060FE; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.accordion_tab_wrapper{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    /* background-color: #0056b3; */
+}
+
+.accordion_tab_group .tab{
+    cursor: pointer;
+    padding: 1rem 5rem;
+    margin: 8px 2px;
+    height: 4rem;
+    overflow: hidden;
+    width: 60%;
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px;
+    /* background-color: #7D71A120;
+    box-shadow: 4px 4px 6px #130B2B35 , 4px 4px 4px #463E5F35 inset ; */
+    
+   
+}
+
+.accordion_tab_group {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30;
+    height: 100%;
+    width: 60%;
+    margin-right: 4rem;
+}
+.accordion_tab_group .tab:hover{
+    /* background: #393939; */
+    color: #86BBA6;
+    
+    /* border: 2px solid #7060FE; */
+}
+
+#one:checked ~ .accordion_tab_group #one-tab,
+#two:checked ~ .accordion_tab_group #two-tab,
+#three:checked ~ .accordion_tab_group #three-tab,
+#four:checked ~ .accordion_tab_group #four-tab
+{
+    background: #13172684;
+    color: #fff;
+    border: 2px solid #7060FE;
+}
+.accordion_tab_wrapper input[type="radio"]{
+    display: none;
+}
+.accordion_tab_contents{
+    background: transparent;
+  text-align: left;
+    color: #fff;
+  
+    border-radius: 10px;
+}
+#one:checked ~ .accordion_tab_contents #one-tab-content,
+#two:checked ~ .accordion_tab_contents #two-tab-content,
+#three:checked ~ .accordion_tab_contents #three-tab-content,
+#four:checked ~ .accordion_tab_contents #four-tab-content
+{
+    display: block;
+}
+.accordion_tab_contents .accordion_tab_content{
+    display: none;
+}
+
+
+/* FICING DIVS */
+
+.accordion_tab_contents{
+    /* background-color: red; */
+width: 50%;
+
+
+    /* overflow-y: scroll; */
+}
+
+.block {
+
+    /* border: 2px solid black; */
+    border-radius: 30px;
+    background-color: #4c446749;
+    box-shadow: 4px 4px 4px #130b2b5f , 4px 4px 4px #675e8463 inset ;
+    display: flex;
+    padding: 3rem 4rem;
+    flex-direction: column;
+    align-items: last baseline;
+    padding: 3rem;
+    /* background-color: #7060FE; */
+
+
+  }
+
+
+
+/* ************************************************************************ */
+
+/* FORM  */
+
+.form-group {
+    margin-bottom: 20px;
+    /* background-color: red; */
+    width: 100%;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style for input fields */
+.form-control {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid white; /* White border bottom */
+    background-color: transparent; /* Transparent background */
+    outline: none;
+}
+
+/* Style for select element */
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Style for submit button */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent; /* Transparent background for select */
+    color: white; /* White font color for select */
+}
+
+/* Style for select dropdown options */
+select.form-control option {
+    background-color: transparent; /* Transparent background for options */
+    color: black; /* White font color for options */
+}
+
+
+
+/* Responsive CSS */
+@media screen and (max-width: 600px) {
+    .personal-info-form {
+        max-width: 100%;
+    }
+}
+
+
+/*  EDUCATION FORM  */
+
+/* Reset default browser styles */
+
+/* Style for form container */
+.education-info-form {
+    max-width: 400px; /* Adjust as needed */
+    margin: auto;
+    padding: 4rem;
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style for input fields */
+.form-control {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid white; /* White border bottom */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White font color */
+    outline: none;
+}
+
+/* Style for submit button */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* **************************sbout */
+
+/* Reset default browser styles */
+
+
+/* Style for form container */
+ .skills-projects-form {
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+    height: 30rem;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style for input fields */
+.form-control {
+    width: 100%;
+    padding: 8px;
+   
+    background-color: transparent; /* Transparent background */
+    color: white; /* White font color */
+    resize: none; /* Disable textarea resize */
+    /* outline: none; */
+}
+
+.skills-projects-form .form-control {
+     border: 1px solid white; 
+    border-radius: 10px; 
+    /* background-color: red; */
+}
+
+/* Style for skills container */
+.skills-container {
+    display: flex;
+    /* background-color: pink; */
+
+}
+
+/* Style for skill inputs column */
+.skill-column {
+    flex: 1;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    
+}
+
+#skill1 , #skill2 , #skill3 , #skill4 {
+
+    margin-bottom: 0.77rem;
+}
+
+.slider {
+    margin-bottom: 1.67rem;
+}
+
+/* Style for slider inputs column */
+.slider-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+
+/* Style for slider inputs */
+.slider {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Style for submit button */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+} 
+.skills-projects-form {
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+    height: 30rem;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+    scrollbar-width:thin; /* Thin scrollbar */
+    scrollbar-color: white transparent; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for scrollbar track */
+.skills-projects-form::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent background */
+}
+
+/* Style for scrollbar thumb */
+.skills-projects-form::-webkit-scrollbar-thumb {
+    background-color: white; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for slider inputs */
+.slider {
+    width: 100%;
+    margin-top: 5px;
+    background-color: transparent !important; /* Transparent background for slider */
+}
+
+label img {
+    display: block;
+    /* background-color: black; */
+}
+
+label .opt {
+
+    /* background-color: pink; */
+}
+
+#one-tab, #two-tab,#four-tab{
+    display: flex;
+    align-items: center;
+    
+    /* background-color: red; */
+    font-size: 1.06rem;
+}
+/* 
+#four-tab img {
+
+    width: 5.33rem;
+height: 5.33rem;
+margin-left: -3rem;
+} */
