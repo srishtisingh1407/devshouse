@@ -20,7 +20,7 @@ var router = express.Router();
 
 
 router.post('/login-signup', function(req, res, next) {
-  res.render('login-signup');
+  res.redirect('login-signup');
 });
 
 router.get('/profile', function(req, res, next) {
@@ -30,9 +30,6 @@ router.get('/profile', function(req, res, next) {
 router.get('/myprofile', function(req, res, next) {
   res.render('myprofile');
 });
-  router.post('/login-signup', function(req, res, next) {
-    res.render('login-signup');
-  });
 
 
 router.get('/tab', function(req,res,next){
