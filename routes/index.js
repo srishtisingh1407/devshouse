@@ -18,8 +18,24 @@ var router = express.Router();
     res.render('hack');
   });
 
-  router.get('/login-signup', function(req, res, next) {
+
+router.get('/login-signup', function(req, res, next) {
+  res.render('login-signup');
+});
+//kk
+router.get('/profile', function(req, res, next) {
+  res.render('profile');
+});
+
+router.get('/myprofile', function(req, res, next) {
+  res.render('myprofile');
+});
+  router.post('/login-signup', function(req, res, next) {
     res.render('login-signup');
   });
 
+
+router.get('/tab', function(req,res,next){
+res.render('tab')
+});
 module.exports = router;
