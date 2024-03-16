@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+var express= require.express();
+
+
 /* GET home page. */
   router.get('/', function(req, res, next) {
     res.render('index');
@@ -17,9 +20,14 @@ var router = express.Router();
   router.get('/hack', function(req, res, next) {
     res.render('hack');
   });
+  router.get('/privacy', function(req, res, next) {
+    res.render('privacy');
+  });
 
   router.get('/login-signup', function(req, res, next) {
     res.render('login-signup');
   });
+
+  
 
 module.exports = router;
