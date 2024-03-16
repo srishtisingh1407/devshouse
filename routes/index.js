@@ -6,10 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.get('/login-signup', function(req, res, next) {
+router.post('/login-signup', function(req, res, next) {
   res.render('login-signup');
 });
-//kk
+
 router.get('/profile', function(req, res, next) {
   res.render('profile');
 });

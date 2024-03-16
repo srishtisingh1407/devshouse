@@ -28,17 +28,10 @@
 
   .main-card{
 
-    /* background-color: lavender; */
-    /* margin-top: 5rem; */
     margin: 3rem 3rem;
     height: 60rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* position: absolute;
-    transform: translate(-50%, -50%); */
-    
   }
 
 
@@ -254,11 +247,6 @@
 
   /* ******KEY SKILLS ******* */
 
-  .right-up-left {
-
-    /* display: flex; */
-    /* background-color: #060113; */
-  }
 
   .right-up-left .key-down {
 
