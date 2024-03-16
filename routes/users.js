@@ -1,45 +1,44 @@
-// const mongoose = require("mongoose");
-// const plm = require("passport-local-mongoose");
+const mongoose = require("mongoose");
+const plm = require("passport-local-mongoose");
 
 
 
 
-// mongoose.connect("mongodb://127.0.0.1:27017/pinterest");
+mongoose.connect("mongodb://127.0.0.1:27017/devshouse");
 
-// const userSchema = new mongoose.Schema({
-//   username: {
-//       type: String,
-//       required: true,
-//       unique: true
-//   },
-//   password: {
-//       type: String,
-//       required: true
-//   },
-//   posts: [{
+const userSchema = new mongoose.Schema({
+  username: {
+      type: String,
+      required: true,
+      unique: true
+  },
+  password: {
+      type: String
+  },
+  // posts: [{
      
-//           type: mongoose.Schema.Types.ObjectId ,
-//           ref: 'Post'
+  //         type: mongoose.Schema.Types.ObjectId ,
+  //         ref: 'Post'
    
-//          //SHARED USER ID
+  //        //SHARED USER ID
    
-//   }], //ID OF POSTS
-//   dp: {
-//       type: String,
-//   },
-//   email: {
-//       type: String,
-//       required: true,
-//       unique: true
-//   },
-//   fullname: {
-//       type: String,
-//       required: true
-//   }
-// });
+  // }], //ID OF POSTS
+  // dp: {
+  //     type: String,
+  // },
+  email: {
+      type: String,
+      required: true,
+      unique: true
+  }
+  // fullname: {
+  //     type: String,
+  //     required: true
+  // }
+});
 
 
-// userSchema.plugin(plm);
+userSchema.plugin(plm);
 
-// module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
 
