@@ -1,10 +1,18 @@
 const people = [
-    { name: "Alice", latitude: 40.7128, longitude: -74.0060 },
-    { name: "Bob", latitude: 34.0522, longitude: -118.2437 },
+    { name: "Alice", latitude: 12.7128, longitude: -74.0060 },
+    { name: "Bob", latitude: 11.0522, longitude: -118.2437 },
     { name: "Charlie", latitude: 51.5074, longitude: -0.1278 },
     { name: "David", latitude: 48.8566, longitude: 2.3522 },
-    { name: "Eve", latitude: 52.5200, longitude: 13.4050 }
+    { name: "Eve", latitude: 52.5200, longitude: 13.4050 },
+    { name: "Frank", latitude: 12.8097036, longitude: 80.1552062 },
+    { name: "Grace", latitude: 12.7397036, longitude: 80.1552062 },
+    { name: "Henry", latitude: 12.8397036, longitude: 80.1552062 },
+    { name: "Isabel", latitude: 12.8397036, longitude: 80.1552062 },
+    { name: "Jack", latitude: 12.8397036, longitude: 80.1552062 },
+    { name: "Kelly", latitude: 12.8397036, longitude: 80.1552062 },
+    { name: "Liam", latitude: 12.8397036, longitude: 80.1552062 }
 ];
+
 
 function filterPeople() {
     const latitude = parseFloat(document.getElementById("latitude").value);

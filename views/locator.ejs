@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter People by Location</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/stylesheets/css-locator/style.css">
 </head>
 <body>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src=""/>Covibe</a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="">hackathons</a></li>
+                <li><a href="">Leaderboard</a></li>
+                <a href="/login-signup" class="button button--ghost">Log In</a>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
     <div class="container">
         <h1>Filter People by Location</h1>
         <div class="filter">
@@ -18,6 +33,36 @@
         </div>
         <div id="results"></div>
     </div>
-    <script src="/javascripts/script.js"></script>
+    <script>
+        function filterPeople() {
+            // Fetch latitude and longitude
+            const latitude = document.getElementById("latitude").value;
+            const longitude = document.getElementById("longitude").value;
+            // Implement your filtering logic here using latitude and longitude
+            // For now, let's just display the coordinates
+            document.getElementById("results").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+        }
+
+        // Function to get current location and fill the input fields
+        function getCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(fillPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Function to fill input fields with current position
+        function fillPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById("latitude").value = latitude;
+            document.getElementById("longitude").value = longitude;
+        }
+
+        // Call getCurrentLocation() when the page loads
+        window.onload = getCurrentLocation;
+    </script>
+    <script src="/javascripts/js-locator/script.js"></script>
 </body>
 </html>
