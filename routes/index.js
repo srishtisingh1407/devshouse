@@ -32,6 +32,10 @@ function isLoggedIn(req, res, next) {
   res.redirect('/');
 }
 
+
+
+
+
 function isLoggedIn(req, res , next){
 
   if(req.isAuthenticated()) return next();
@@ -95,9 +99,7 @@ router.get('/logout' , function(req,res){
   router.get('/timeline', function(req, res, next) {
     res.render('timeline');
   });
-  router.get('/profile', function(req, res, next) {
-    res.render('profile');
-  });
+ 
   router.get('/nav', function(req, res, next) {
     res.render('nav');
   });
@@ -120,18 +122,13 @@ router.get('/logout' , function(req,res){
 
 router.post('/login-signup', function(req, res, next) {
   res.render('login-signup');
-});
-
+  
 router.get('/login-signup', function(req, res, next) {
   res.render('login-signup');
 });
 
 router.get('/profile', function(req, res, next) {
   res.render('profile');
-});
-
-router.get('/myprofile', function(req, res, next) {
-  res.render('myprofile');
 });
 
 
