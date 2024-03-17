@@ -120,8 +120,9 @@ router.get('/logout' , function(req,res){
   });
 
 
-router.post('/login-signup', function(req, res, next) {
+router.post('/login-signup'), function(req, res, next) {
   res.render('login-signup');
+}
   
 router.get('/login-signup', function(req, res, next) {
   res.render('login-signup');
