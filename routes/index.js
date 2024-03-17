@@ -118,27 +118,14 @@ router.get('/logout' , function(req,res){
   });
 
 
+router.post('/login-signup', function(req, res, next) {
+  res.render('login-signup');
+});
+
 router.get('/login-signup', function(req, res, next) {
   res.render('login-signup');
 });
 
-<<<<<<< HEAD
-router.get('/loc', function(req, res, next) {
-  res.render('location');
-});
-
-
-
-  router.post('/login-signup', function(req, res, next) {
-    res.render('login-signup');
-});
-  router.post('/my', function(req, res, next) {
-    res.render('myprofile');
-});
-  router.post('/map', function(req, res, next) {
-    res.render('location');
-});
-=======
 router.get('/profile', function(req, res, next) {
   res.render('profile');
 });
@@ -162,8 +149,6 @@ router.get('/myprofile' , isLoggedIn , function(req,res,next){
   res.send("myprofile")
 });
 // isLoggedin is a middleware ---> hence next function won't work untill that function runs
-
->>>>>>> 9cca0acb16ce8ba5acb793060b647014868dbc49
 
 module.exports = router;
 
