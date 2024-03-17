@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter People by Location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Filter People by Location</h1>
+        <div class="filter">
+            <label for="latitude">Latitude:</label>
+            <input type="number" id="latitude" step="any">
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" step="any">
+            <button onclick="filterPeople()">Filter</button>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

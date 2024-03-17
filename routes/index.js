@@ -26,6 +26,12 @@ var router = express.Router();
   router.get('/location', function(req, res, next) {
     res.render('location');
   });
+  router.get('/myprofile', function(req, res, next) {
+    res.render('myprofile');
+  });
+  router.get('/locator', function(req, res, next) {
+    res.render('locator');
+  });
 
 
 router.get('/login-signup', function(req, res, next) {
